@@ -55,10 +55,39 @@
              NSLog(@"ERORORORRO? %@", error);
              // Handle error
          } else {
-             NSLog(@"no eror?");
              [self showRoute:response];
+             NSString *directionsString = [self getDirectionsString:response];
+             [self postToPasteBin:directionsString];
          }
      }];
+    
+}
+
+- (NSString *) getDirectionsString:(MKDirectionsResponse *)response {
+    NSString *directionsString = @"";
+    for (MKRoute *route in response.routes)
+    {
+        for (MKRouteStep *step in route.steps)
+        {
+            directionsString = [directionsString stringByAppendingString:step.instructions];
+            directionsString = [directionsString stringByAppendingString:@","];
+        }
+    }
+    NSLog(@"%@", directionsString);
+    return directionsString;
+}
+
+- (void)postToPasteBin:(NSString *) directions {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://pastebin.com/api/api_post.php"]];
+    NSString *params = [[NSString alloc] initWithFormat:@"api_option=paste&api_paste_code=%@&api_paste_expire_date=N&api_paste_private=0&api_dev_key=f4ace3850850f1311210671d075d06aa&api_user_key=effb5ca014660752552cd785849d43ac", directions];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData*)data {
+    NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"connection did receive data! ---- %@", myString);
 }
 
 -(void)showRoute:(MKDirectionsResponse *)response

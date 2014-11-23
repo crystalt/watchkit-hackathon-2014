@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA92EBDC1A229BBC00C56EB1 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA92EBDB1A229BBC00C56EB1 /* WatchKit.framework */; };
+		BA92EBE31A229BBC00C56EB1 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92EBE21A229BBC00C56EB1 /* InterfaceController.m */; };
+		BA92EBE61A229BBC00C56EB1 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92EBE51A229BBC00C56EB1 /* NotificationController.m */; };
+		BA92EBE91A229BBC00C56EB1 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA92EBE81A229BBC00C56EB1 /* GlanceController.m */; };
+		BA92EBEB1A229BBC00C56EB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBEA1A229BBC00C56EB1 /* Images.xcassets */; };
+		BA92EBEF1A229BBC00C56EB1 /* WatchNav Watch App.app in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBEE1A229BBC00C56EB1 /* WatchNav Watch App.app */; };
+		BA92EBF61A229BBC00C56EB1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBF51A229BBC00C56EB1 /* Interface.storyboard */; };
+		BA92EBF81A229BBC00C56EB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBF71A229BBC00C56EB1 /* Images.xcassets */; };
+		BA92EBFB1A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA92EBD91A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BAFB9AF01A2274FC00D4B013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AEF1A2274FC00D4B013 /* main.m */; };
 		BAFB9AF31A2274FC00D4B013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AF21A2274FC00D4B013 /* AppDelegate.m */; };
 		BAFB9AF61A2274FC00D4B013 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AF51A2274FC00D4B013 /* ViewController.m */; };
@@ -19,6 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BA92EBF01A229BBC00C56EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFB9AE21A2274FC00D4B013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA92EBED1A229BBC00C56EB1;
+			remoteInfo = "WatchNav Watch App";
+		};
+		BA92EBF91A229BBC00C56EB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFB9AE21A2274FC00D4B013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA92EBD81A229BBC00C56EB1;
+			remoteInfo = "WatchNav WatchKit Extension";
+		};
 		BAFB9B041A2274FC00D4B013 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BAFB9AE21A2274FC00D4B013 /* Project object */;
@@ -28,7 +51,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BA92EC021A229BBC00C56EB1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA92EBFB1A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BA92EBD91A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchNav WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA92EBDB1A229BBC00C56EB1 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		BA92EBDF1A229BBC00C56EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA92EBE01A229BBC00C56EB1 /* PushNotificationPayload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PushNotificationPayload.json; sourceTree = "<group>"; };
+		BA92EBE11A229BBC00C56EB1 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		BA92EBE21A229BBC00C56EB1 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		BA92EBE41A229BBC00C56EB1 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		BA92EBE51A229BBC00C56EB1 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		BA92EBE71A229BBC00C56EB1 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		BA92EBE81A229BBC00C56EB1 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		BA92EBEA1A229BBC00C56EB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA92EBEE1A229BBC00C56EB1 /* WatchNav Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchNav Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA92EBF41A229BBC00C56EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA92EBF51A229BBC00C56EB1 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
+		BA92EBF71A229BBC00C56EB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BAFB9AEA1A2274FC00D4B013 /* WatchNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFB9AEE1A2274FC00D4B013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAFB9AEF1A2274FC00D4B013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +99,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA92EBD61A229BBC00C56EB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA92EBDC1A229BBC00C56EB1 /* WatchKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAFB9AE71A2274FC00D4B013 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,6 +126,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA92EBDA1A229BBC00C56EB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EBDB1A229BBC00C56EB1 /* WatchKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA92EBDD1A229BBC00C56EB1 /* WatchNav WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EBE11A229BBC00C56EB1 /* InterfaceController.h */,
+				BA92EBE21A229BBC00C56EB1 /* InterfaceController.m */,
+				BA92EBE41A229BBC00C56EB1 /* NotificationController.h */,
+				BA92EBE51A229BBC00C56EB1 /* NotificationController.m */,
+				BA92EBE71A229BBC00C56EB1 /* GlanceController.h */,
+				BA92EBE81A229BBC00C56EB1 /* GlanceController.m */,
+				BA92EBEA1A229BBC00C56EB1 /* Images.xcassets */,
+				BA92EBDE1A229BBC00C56EB1 /* Supporting Files */,
+			);
+			path = "WatchNav WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		BA92EBDE1A229BBC00C56EB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EBDF1A229BBC00C56EB1 /* Info.plist */,
+				BA92EBE01A229BBC00C56EB1 /* PushNotificationPayload.json */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA92EBF21A229BBC00C56EB1 /* WatchNav Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EBF51A229BBC00C56EB1 /* Interface.storyboard */,
+				BA92EBF71A229BBC00C56EB1 /* Images.xcassets */,
+				BA92EBF31A229BBC00C56EB1 /* Supporting Files */,
+			);
+			path = "WatchNav Watch App";
+			sourceTree = "<group>";
+		};
+		BA92EBF31A229BBC00C56EB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA92EBF41A229BBC00C56EB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BAFB9AE11A2274FC00D4B013 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +183,9 @@
 				BAFB9B131A227C3200D4B013 /* MapKit.framework */,
 				BAFB9AEC1A2274FC00D4B013 /* WatchNav */,
 				BAFB9B061A2274FC00D4B013 /* WatchNavTests */,
+				BA92EBDD1A229BBC00C56EB1 /* WatchNav WatchKit Extension */,
+				BA92EBF21A229BBC00C56EB1 /* WatchNav Watch App */,
+				BA92EBDA1A229BBC00C56EB1 /* Frameworks */,
 				BAFB9AEB1A2274FC00D4B013 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +195,8 @@
 			children = (
 				BAFB9AEA1A2274FC00D4B013 /* WatchNav.app */,
 				BAFB9B031A2274FC00D4B013 /* WatchNavTests.xctest */,
+				BA92EBD91A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex */,
+				BA92EBEE1A229BBC00C56EB1 /* WatchNav Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +245,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BA92EBD81A229BBC00C56EB1 /* WatchNav WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA92EC011A229BBC00C56EB1 /* Build configuration list for PBXNativeTarget "WatchNav WatchKit Extension" */;
+			buildPhases = (
+				BA92EBD51A229BBC00C56EB1 /* Sources */,
+				BA92EBD61A229BBC00C56EB1 /* Frameworks */,
+				BA92EBD71A229BBC00C56EB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA92EBF11A229BBC00C56EB1 /* PBXTargetDependency */,
+			);
+			name = "WatchNav WatchKit Extension";
+			productName = "WatchNav WatchKit Extension";
+			productReference = BA92EBD91A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		BA92EBED1A229BBC00C56EB1 /* WatchNav Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA92EC001A229BBC00C56EB1 /* Build configuration list for PBXNativeTarget "WatchNav Watch App" */;
+			buildPhases = (
+				BA92EBEC1A229BBC00C56EB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchNav Watch App";
+			productName = "WatchNav Watch App";
+			productReference = BA92EBEE1A229BBC00C56EB1 /* WatchNav Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		BAFB9AE91A2274FC00D4B013 /* WatchNav */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAFB9B0D1A2274FC00D4B013 /* Build configuration list for PBXNativeTarget "WatchNav" */;
@@ -137,10 +285,12 @@
 				BAFB9AE61A2274FC00D4B013 /* Sources */,
 				BAFB9AE71A2274FC00D4B013 /* Frameworks */,
 				BAFB9AE81A2274FC00D4B013 /* Resources */,
+				BA92EC021A229BBC00C56EB1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA92EBFA1A229BBC00C56EB1 /* PBXTargetDependency */,
 			);
 			name = WatchNav;
 			productName = WatchNav;
@@ -174,6 +324,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = WatchMe;
 				TargetAttributes = {
+					BA92EBD81A229BBC00C56EB1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					BA92EBED1A229BBC00C56EB1 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					BAFB9AE91A2274FC00D4B013 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -198,11 +354,31 @@
 			targets = (
 				BAFB9AE91A2274FC00D4B013 /* WatchNav */,
 				BAFB9B021A2274FC00D4B013 /* WatchNavTests */,
+				BA92EBD81A229BBC00C56EB1 /* WatchNav WatchKit Extension */,
+				BA92EBED1A229BBC00C56EB1 /* WatchNav Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA92EBD71A229BBC00C56EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA92EBEB1A229BBC00C56EB1 /* Images.xcassets in Resources */,
+				BA92EBEF1A229BBC00C56EB1 /* WatchNav Watch App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA92EBEC1A229BBC00C56EB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA92EBF61A229BBC00C56EB1 /* Interface.storyboard in Resources */,
+				BA92EBF81A229BBC00C56EB1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAFB9AE81A2274FC00D4B013 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +399,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA92EBD51A229BBC00C56EB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA92EBE61A229BBC00C56EB1 /* NotificationController.m in Sources */,
+				BA92EBE31A229BBC00C56EB1 /* InterfaceController.m in Sources */,
+				BA92EBE91A229BBC00C56EB1 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAFB9AE61A2274FC00D4B013 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +430,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BA92EBF11A229BBC00C56EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA92EBED1A229BBC00C56EB1 /* WatchNav Watch App */;
+			targetProxy = BA92EBF01A229BBC00C56EB1 /* PBXContainerItemProxy */;
+		};
+		BA92EBFA1A229BBC00C56EB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA92EBD81A229BBC00C56EB1 /* WatchNav WatchKit Extension */;
+			targetProxy = BA92EBF91A229BBC00C56EB1 /* PBXContainerItemProxy */;
+		};
 		BAFB9B051A2274FC00D4B013 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BAFB9AE91A2274FC00D4B013 /* WatchNav */;
@@ -271,6 +467,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BA92EBFC1A229BBC00C56EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WatchNav WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BA92EBFD1A229BBC00C56EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "WatchNav WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BA92EBFE1A229BBC00C56EB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = WatchNav_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchNav Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		BA92EBFF1A229BBC00C56EB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				IBSC_MODULE = WatchNav_WatchKit_Extension;
+				INFOPLIST_FILE = "WatchNav Watch App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		BAFB9B0B1A2274FC00D4B013 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -406,6 +658,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA92EC001A229BBC00C56EB1 /* Build configuration list for PBXNativeTarget "WatchNav Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA92EBFE1A229BBC00C56EB1 /* Debug */,
+				BA92EBFF1A229BBC00C56EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA92EC011A229BBC00C56EB1 /* Build configuration list for PBXNativeTarget "WatchNav WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA92EBFC1A229BBC00C56EB1 /* Debug */,
+				BA92EBFD1A229BBC00C56EB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BAFB9AE51A2274FC00D4B013 /* Build configuration list for PBXProject "WatchNav" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
