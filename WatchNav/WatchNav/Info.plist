@@ -24,8 +24,10 @@
 	<true/>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string></string>
-	<key>NSLocationUsageDescription</key>
-	<string>Hello location plz</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Let us always use your location, please!</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Let us use your location, please!</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
