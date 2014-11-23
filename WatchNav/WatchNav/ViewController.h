@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (strong, nonatomic) MKMapItem *destination;
 
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)changeMapType:(id)sender;
