@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) MKAnnotationView *annotation;
 @end
 
 @implementation ViewController
@@ -44,7 +45,12 @@
     [mapView setRegion:region animated:NO];
     
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
-    request.source = [MKMapItem mapItemForCurrentLocation];
+    
+    // hardcode hacker dojo
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(37.402935, -122.049835) addressDictionary:nil];
+    request.source = [[MKMapItem alloc] initWithPlacemark:placemark];
+    
+    // request.source = [MKMapItem mapItemForCurrentLocation];
     
     
     request.destination = mapItem;
@@ -121,6 +127,10 @@
 }
 
 - (IBAction)directionButton:(id)sender {
+    // Reset map view and annotations
+    [mapView removeAnnotations:mapView.annotations];
+    
+    
     MKLocalSearchRequest *request =
     [[MKLocalSearchRequest alloc] init];
     request.naturalLanguageQuery = addressBar.text;

@@ -10,13 +10,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label width="127.5" height="137.5" alignment="left" text="fdsfkljsdflsdaj fkdlsjflsa fdsklfjlsdfj kfjdlsfjslkd jfkldsjflsa" numberOfLines="0" id="eB7-BY-pXO">
-                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                        </label>
+                        <label width="132.5" height="151.5" alignment="left" text="Loading..." numberOfLines="0" id="QG2-kJ-DKf"/>
                     </items>
+                    <connections>
+                        <outlet property="label" destination="QG2-kJ-DKf" id="xXT-qB-Dvz"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="347.25"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
