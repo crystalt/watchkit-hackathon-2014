@@ -16,6 +16,8 @@
 		BA92EBF61A229BBC00C56EB1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBF51A229BBC00C56EB1 /* Interface.storyboard */; };
 		BA92EBF81A229BBC00C56EB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA92EBF71A229BBC00C56EB1 /* Images.xcassets */; };
 		BA92EBFB1A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA92EBD91A229BBC00C56EB1 /* WatchNav WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BAA3CEF21A23A83300CE6D20 /* Map-App-big.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA3CEF11A23A83300CE6D20 /* Map-App-big.png */; };
+		BAA3CEF41A23A83A00CE6D20 /* Map-App.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA3CEF31A23A83A00CE6D20 /* Map-App.png */; };
 		BAFB9AF01A2274FC00D4B013 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AEF1A2274FC00D4B013 /* main.m */; };
 		BAFB9AF31A2274FC00D4B013 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AF21A2274FC00D4B013 /* AppDelegate.m */; };
 		BAFB9AF61A2274FC00D4B013 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFB9AF51A2274FC00D4B013 /* ViewController.m */; };
@@ -81,6 +83,8 @@
 		BA92EBF41A229BBC00C56EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA92EBF51A229BBC00C56EB1 /* Interface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interface.storyboard; sourceTree = "<group>"; };
 		BA92EBF71A229BBC00C56EB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BAA3CEF11A23A83300CE6D20 /* Map-App-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-App-big.png"; sourceTree = "<group>"; };
+		BAA3CEF31A23A83A00CE6D20 /* Map-App.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-App.png"; sourceTree = "<group>"; };
 		BAFB9AEA1A2274FC00D4B013 /* WatchNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAFB9AEE1A2274FC00D4B013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAFB9AEF1A2274FC00D4B013 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 		BAFB9AED1A2274FC00D4B013 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAA3CEF31A23A83A00CE6D20 /* Map-App.png */,
+				BAA3CEF11A23A83300CE6D20 /* Map-App-big.png */,
 				BAFB9AEE1A2274FC00D4B013 /* Info.plist */,
 				BAFB9AEF1A2274FC00D4B013 /* main.m */,
 			);
@@ -384,6 +390,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAFB9AF91A2274FC00D4B013 /* Main.storyboard in Resources */,
+				BAA3CEF21A23A83300CE6D20 /* Map-App-big.png in Resources */,
+				BAA3CEF41A23A83A00CE6D20 /* Map-App.png in Resources */,
 				BAFB9AFE1A2274FC00D4B013 /* LaunchScreen.xib in Resources */,
 				BAFB9AFB1A2274FC00D4B013 /* Images.xcassets in Resources */,
 			);
