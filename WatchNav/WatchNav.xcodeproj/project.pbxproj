@@ -665,6 +665,7 @@
 				BA92EBFF1A229BBC00C56EB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA92EC011A229BBC00C56EB1 /* Build configuration list for PBXNativeTarget "WatchNav WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -673,6 +674,7 @@
 				BA92EBFD1A229BBC00C56EB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAFB9AE51A2274FC00D4B013 /* Build configuration list for PBXProject "WatchNav" */ = {
 			isa = XCConfigurationList;

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSURLConnection *connection4;
 @property (nonatomic, strong) NSMutableDictionary *dict;
 @property (nonatomic, strong) NSString *str;
+@property (nonatomic, strong) NSString *directionsString;
 @end
 
 @implementation InterfaceController
@@ -41,6 +42,9 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     NSLog(@"%@ did deactivate", self);
+}
+- (IBAction)getDirectionsMenuButton {
+    [self refreshUI:self.directionsString];
 }
 
 - (void)magic2 {
@@ -83,6 +87,7 @@
         [self read:b];
         self.str = b;
     } else if (connection == self.connection4) {
+        self.directionsString = myString;
         [self refreshUI:myString];
     }
 }

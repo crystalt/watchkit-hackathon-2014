@@ -10,8 +10,17 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label width="132.5" height="151.5" alignment="left" text="Loading..." numberOfLines="0" id="QG2-kJ-DKf"/>
+                        <label width="132.5" height="151.5" alignment="left" text="Loading..." textAlignment="center" numberOfLines="0" id="QG2-kJ-DKf"/>
                     </items>
+                    <menu key="menu" id="HtN-e3-8uv">
+                        <items>
+                            <menuItem title="Directions" icon="play" id="JVr-3U-9sf">
+                                <connections>
+                                    <action selector="getDirectionsMenuButton" destination="AgC-eL-Hgc" id="HFB-Rj-YOu"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="label" destination="QG2-kJ-DKf" id="xXT-qB-Dvz"/>
                     </connections>
