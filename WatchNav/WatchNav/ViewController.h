@@ -17,9 +17,9 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) MKMapItem *destination;
 @property (strong, nonatomic) NSURLConnection *connection;
+@property (strong, nonatomic) IBOutlet UITextField *addressBar;
 
-- (IBAction)zoomIn:(id)sender;
-- (IBAction)changeMapType:(id)sender;
+- (IBAction)directionButton:(id)sender;
 
 @end
 

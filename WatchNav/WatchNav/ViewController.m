@@ -15,9 +15,13 @@
 @implementation ViewController
 
 @synthesize mapView;
+@synthesize addressBar;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[self navigationController] setNavigationBarHidden:YES];
     
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -28,7 +32,7 @@
     mapView.delegate = self;
 }
 
-- (void)getDirections
+- (void)getDirections:(MKMapItem *) mapItem
 {
     // ZOOM TO THE RIGHT PLACE ON THE MAP
     MKUserLocation *userLocation = mapView.userLocation;
@@ -41,11 +45,9 @@
     
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
     request.source = [MKMapItem mapItemForCurrentLocation];
-    NSLog(@"sourceee? %@", request.source);
     
-    // Coordinates of San Francisco
-    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:CLLocationCoordinate2DMake(37.7833, -122.4167) addressDictionary:nil];
-    request.destination = [[MKMapItem alloc] initWithPlacemark:placemark];
+    
+    request.destination = mapItem;
     request.requestsAlternateRoutes = NO;
     MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
     
@@ -118,30 +120,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)zoomIn:(id)sender {
-//    MKUserLocation *userLocation = mapView.userLocation;
-//    
-//    NSLog(@"LOCATION %@", userLocation);
-//    
-//    MKCoordinateRegion region =
-//    MKCoordinateRegionMakeWithDistance (
-//                                        userLocation.location.coordinate, 20000, 20000);
-//    [mapView setRegion:region animated:NO];
-    [self getDirections];
-}
+- (IBAction)directionButton:(id)sender {
+    MKLocalSearchRequest *request =
+    [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = addressBar.text;
+    request.region = mapView.region;
+    
 
-- (IBAction)changeMapType:(id)sender {
-    if (mapView.mapType == MKMapTypeStandard) {
-        mapView.mapType = MKMapTypeSatellite;
-    }
-    else {
-        mapView.mapType = MKMapTypeStandard;
-    }
+    MKLocalSearch *search =
+    [[MKLocalSearch alloc]initWithRequest:request];
+    
+    NSLog(@"Starting search...");
+    
+    [search startWithCompletionHandler:^(MKLocalSearchResponse
+                                         *response, NSError *error) {
+        if (response.mapItems.count == 0) {
+            NSLog(@"No Matches");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No matches" message:@"No matches found" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        else
+            // Just take the first matching location and we don't care about the rest
+        {
+            NSLog(@"Found a location.");
+            MKMapItem *mapItem = [response.mapItems objectAtIndex:0];
+            
+            MKPointAnnotation *annotation =
+            [[MKPointAnnotation alloc]init];
+            annotation.coordinate = mapItem.placemark.coordinate;
+            annotation.title = mapItem.name;
+            [mapView addAnnotation:annotation];
+            
+            [self getDirections:mapItem];
+
+        }
+
+    }];
+    
+    [self.addressBar resignFirstResponder];
+//    self.addressBar.text = @"";
+
+    
+    
+    
 }
-//- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-//{
-//    mapView.centerCoordinate =
-//    userLocation.location.coordinate;
-//}
 
 @end

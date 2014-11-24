@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ny6-zH-Hef">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,37 +18,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3a-5c-0So">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Zoom" id="aIh-GI-CC4">
-                                        <connections>
-                                            <action selector="zoomIn:" destination="BYZ-38-t0r" id="dhK-fr-caC"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="hBH-uj-aQT">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="7zT-d2-uOL">
+                                            <rect key="frame" x="16" y="7" width="226" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </barButtonItem>
-                                    <barButtonItem title="Type" id="TeV-g6-S5X">
+                                    <barButtonItem title="Get Directions" id="aIh-GI-CC4">
                                         <connections>
-                                            <action selector="changeMapType:" destination="BYZ-38-t0r" id="7Ir-tm-Fc3"/>
+                                            <action selector="directionButton:" destination="BYZ-38-t0r" id="OcP-Tn-4Ka"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="I9F-kH-RL3">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I9F-kH-RL3" firstAttribute="leading" secondItem="m3a-5c-0So" secondAttribute="leading" id="0XD-Uy-KUb"/>
-                            <constraint firstAttribute="trailing" secondItem="m3a-5c-0So" secondAttribute="trailing" id="0l7-5h-twj"/>
-                            <constraint firstItem="I9F-kH-RL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1RA-6p-aPh"/>
-                            <constraint firstItem="m3a-5c-0So" firstAttribute="top" secondItem="I9F-kH-RL3" secondAttribute="bottom" id="Blj-OC-8ns"/>
-                            <constraint firstItem="I9F-kH-RL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V8o-No-ElH"/>
-                            <constraint firstItem="m3a-5c-0So" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="rCO-ND-pSm"/>
-                            <constraint firstItem="I9F-kH-RL3" firstAttribute="trailing" secondItem="m3a-5c-0So" secondAttribute="trailing" id="rco-3R-jRO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m3a-5c-0So" secondAttribute="trailing" constant="-16" id="BiH-b0-rP6"/>
+                            <constraint firstItem="m3a-5c-0So" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Gs7-Om-FFY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I9F-kH-RL3" secondAttribute="trailing" constant="-16" id="KNv-nu-tuk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I9F-kH-RL3" secondAttribute="bottom" id="KVp-JR-hh0"/>
+                            <constraint firstItem="I9F-kH-RL3" firstAttribute="top" secondItem="m3a-5c-0So" secondAttribute="bottom" id="Q3L-Hl-2Ds"/>
+                            <constraint firstItem="I9F-kH-RL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Uia-zY-p8z"/>
+                            <constraint firstItem="m3a-5c-0So" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wr1-m8-oXh"/>
+                            <constraint firstItem="I9F-kH-RL3" firstAttribute="top" secondItem="m3a-5c-0So" secondAttribute="bottom" id="qrj-mt-gh3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n7c-rs-X4N"/>
                     <connections>
+                        <outlet property="addressBar" destination="7zT-d2-uOL" id="Jbx-3B-JDQ"/>
                         <outlet property="mapView" destination="I9F-kH-RL3" id="dRt-WI-X68"/>
                     </connections>
                 </viewController>
